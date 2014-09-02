@@ -1,0 +1,52 @@
+<template name="startup">
+
+	<div class="startup-wrap">
+		<div class="startup-logo">{{getFirstWord name}}</div>
+		<div class="startup-name">
+			{{name}}
+		</div>
+
+		<div class="startup-description">
+			This is the startup's description and whatnot(:
+		</div>
+
+		<div class="startup-tags">
+			This . Is . A . List . Of . Tags
+		</div>
+
+		<button class="btn btn-info btn-follow">
+			Follow
+		</button>
+
+	</div>
+	
+	<div class="startup-wrap">
+		<h1> Funding </h1>
+		{{#if getFeedGroup}}
+			{{#each getFeedGroup}}
+				<hr>
+				{{> feedGroup}}
+			{{/each}}
+		{{else}}
+			--- No Feeds Available --- 
+		{{/if}}
+	</div>
+
+	<div class="startup-wrap">
+		<h1> Investors </h1>
+			{{#if getInvestors}}
+				<div class="startup-investor">
+					{{getInvestors}}
+				</div>
+			{{else}}
+				--- No Investors Has Invested Yet ---
+			{{/if}}
+
+	</div>
+
+	<div class="startup-wrap">
+		<h1> Comments </h1>
+		--- No Comments Yet ---
+	</div>
+
+</template>

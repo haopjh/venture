@@ -1,0 +1,14 @@
+<template name="sideBar">
+	<div class="col-md-3 side-bar">
+		<ul class="nav nav-pills nav-stacked" role="tablist">
+			<li class="disabled"><a href="#">Overview</a></li>
+			<li class="{{activeRouteClass 'fundingFeeds'}}"><a href="/funding-feeds">Funding Feed</a></li>
+			<li class="{{activeRouteClass 'startups'}}"><a href="/startups">Startups</a></li>
+			<li class="{{activeRouteClass 'exits'}}"><a href="/exits">M&As</a></li>
+			<li class="disabled"><a href="#">News Mention</a></li>
+			<li class="disabled"><a href="#">Saved Searches</a></li>
+			<li class="disabled"><a href="#">Alerts</a></li>
+			<li class="disabled"><a href="#">Research</a></li>
+		</ul>
+	</div>
+</template>

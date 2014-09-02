@@ -1,0 +1,46 @@
+<template name="fundingFeeds">
+
+	{{#if getFeedGroup}}
+		{{#each getFeedGroup}}
+			{{> feedGroup}}
+		{{/each}}
+
+			{{> loadMore}}
+		
+		<br/>
+	{{else}}
+
+		{{#if searchText}}
+			<div class="alert alert-warning" role="alert">No Such Company in our Portfolio</div>
+		{{else}}
+
+			PLEASE GENERATE FUNDING FEEDS
+		{{/if}}
+	{{/if}}
+
+</template>
+
+<template name="feedGroup">
+	<div class="feed-group">
+		<div class="feed-group-date">
+			{{parseDate getDate}}
+		</div>
+		<div class="jumbotron feed-cell">
+			{{#each this}}
+				{{> singleFeed}}
+			{{/each}}
+		</div>
+	</div>
+</template>
+
+<template name="singleFeed">
+	<div class="single-feed">
+		<div class="single-feed-name"><a href="/startup/{{name}}">{{name}}</a></div> - {{country}} <br />
+		{{getParsedAmount amount}} - {{stage}} <br />
+		Investors - {{investors}}
+	</div>
+</template>
+
+
+
+

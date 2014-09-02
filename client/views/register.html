@@ -1,0 +1,121 @@
+<template name="registerStartup">
+
+	<div class="container-register-form">
+
+		<p class="register-title">
+			Register Your Awesome Startup now!
+		</p>
+		<form role="form">
+			<div class="form-group form-group-name">
+				<label class="control-label" >Name</label>
+				<input type="text" class="form-control register-form-control" name="name" placeholder="Enter Name">
+			</div>
+			<div class="form-group form-group-url">
+				<label class="control-label">Website URL</label>
+				<input type="text" class="form-control register-form-control" name="url" placeholder="Enter URL">
+			</div>
+			<div class="form-group form-group-location">
+				<label class="control-label">Location</label>
+				<input type="text" class="form-control register-form-control" name="location" placeholder="Enter Location">
+			</div>
+			<div class="form-group form-group-category">
+				<label class="control-label">Category</label>
+				<select class="form-control register-form-control" name="category" id="register-category">
+					<option>Choose Category:D</option>
+					<option>Travel</option>
+					<option>Education</option>
+					<option>Fashion</option>
+					<option>Dining</option>
+					<option>Skin Care</option>
+				</select>
+			</div>
+
+			<div class="form-group form-group-description">
+				<label class="control-label register-form-description">Description</label>
+				<textarea class="form-control register-form-control-description" rows="3" name="description" placeholder="Enter Description"></textarea>
+			</div>
+			
+			
+			
+			
+			<button type="submit" class="btn btn-default register-start-btn">Submit</button>
+		</form>
+	</div>
+
+
+		<a href="/register/funding" type="button" class="btn btn-info btn-register">Switch to Funding Feed</a>
+
+	
+</template>
+
+<template name="registerFunding">
+	<div class="container-register-form">
+		<p class="register-title">
+			Submit your Funding Details now!
+		</p>
+		<form role="form">
+			<div class="form-group form-group-name">
+				<label class="control-label" >Name</label>
+				<input type="text" class="form-control register-form-control" id="register-name" placeholder="Browse Names">
+				<select class="form-control register-form-control" id="register-name-list">
+					<option>Please Choose One!</option>
+					{{#each getNameList}}
+						<option>{{name}}</option>
+					{{/each}}
+				</select>
+			</div>
+
+
+			<div class="form-group form-group-date">
+				<label class="control-label">Date</label>
+				<input type="text" class="form-control register-form-control" id="register-date" placeholder="Enter Date  (DD/MM/YYYY)">
+			</div>
+
+
+			<div class="form-group form-group-stage">
+				<label class="control-label" >Stage</label>
+				<select class="form-control register-form-control" name="category" id="register-stage">
+					<option>Select Funding Stage</option>
+					{{#each getAllStages}}
+						<option>{{name}}</option>
+					{{/each}}
+				</select>
+			</div>
+
+			<div class="form-group form-group-amount">
+				<label class="control-label">Amount (M)</label>
+				<input type="text" class="form-control register-form-control"  id="register-amount" placeholder="Enter Amount in M">
+
+				<div class="checkbox" id="register-amount-check">
+					<label>
+						<input type="checkbox" id="checkbox-amount"> Undisclosed
+					</label>
+				</div>
+			</div>
+
+
+
+			<div class="form-group form-group-investors">
+				<label class="control-label register-form-investor">Investors</label>
+				<textarea class="form-control register-form-control-investor" rows="3" id="register-investors" placeholder="E.g. SPH, Spring, Others"></textarea>
+
+
+				<div class="checkbox" id="register-investors-check">
+					<label>
+						<input type="checkbox" id="checkbox-investors"> Undisclosed
+					</label>
+				</div>
+			</div>
+			
+			
+			
+			
+			<button type="submit" class="btn btn-default register-start-btn">Submit</button>
+		</form>
+	</div>
+
+
+		
+	<a href="/register/startup" type="button" class="btn btn-info btn-register">Switch to Startup</a>
+	
+</template>

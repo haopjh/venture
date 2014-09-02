@@ -1,0 +1,41 @@
+<template name="startups">
+	{{#if getStartups}}
+		<table class="table table-striped">
+			<thead class="startup-table">
+				<tr>
+					<th>Name</th>
+					<th>Country</th>
+					<th>Funding Stage</th>
+					<th>Total Funding</th>
+					<th>Last Funding Date</th>
+				</tr>
+			</thead>
+			<tbody>
+				{{#each getStartups}}
+					<tr>
+						<td><a href="/startup/{{name}}">{{name}}</a></td>
+						<td>{{country}}</td>
+						<td>{{lastStage}}</td>
+						<td>{{getParsedAmount totalFunding}}</td>
+						<td>
+							{{#if timestamp}}
+								{{parseDate timestamp}}
+							{{else}}
+								No available Date
+							{{/if}}
+						</td>
+					</tr>	
+				{{/each}}
+			</tbody>
+		</table>
+		{{> loadMore}}
+
+	{{else}}
+		{{#if searchText}}
+			<div class="alert alert-warning" role="alert">No Such Company in our Portfolio</div>
+		{{else}}
+
+			PLEASE GENERATE STARTUPS
+		{{/if}}
+	{{/if}}
+</template>

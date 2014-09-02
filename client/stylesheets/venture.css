@@ -1,0 +1,251 @@
+/* CSS declarations go here */
+
+/*******************************
+*	Layout Styling
+******************************/
+body {
+  font-family: "Roboto" , Helvetica, sans-serif !important;
+  background: #ecf0f1;
+}
+
+a {
+	color: #1abc9c;
+}
+
+a:hover {
+	color: #27ae60;
+}
+
+.nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
+	background-color: #1abc9c;
+}
+
+#load-more {
+	outline: none;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.has-success .control-label {
+	color: #1abc9c;
+}
+
+.has-success .form-control {
+	border-color: #1abc9c;
+}
+
+table {
+	border-radius: 10px;
+	background: #ffffff;
+}
+
+/*******************************
+*	Header
+******************************/
+.navbar {
+	background: #ffffff;
+}
+
+.form-control.searchbar {
+	z-index: 0;
+}
+
+.navbar-default .navbar-nav > li > a {
+	color: black;
+	font-size: 115%;
+	font-weight: 400;
+}
+
+.navbar-default .navbar-brand {
+	color: black;
+	font-size: 150%;
+	font-weight: 500;
+}
+
+
+/*******************************
+*	Side bar
+******************************/
+.side-bar {
+	margin-bottom: 30px;
+	border-radius: 10px;
+	background: #ffffff;
+}
+
+
+/*******************************
+*	Feeds
+******************************/
+.feed-group {
+	padding-top: 20px;
+}
+
+.jumbotron.feed-cell {
+	padding: 10px;
+	margin-bottom: 0px;
+	background-color: inherit;
+}
+
+.single-feed {
+	padding: 10px;
+	margin-bottom: 5px;
+	border-radius: 10px;
+	background: #ffffff;
+}
+
+.container-btn {
+	width: 100%;
+	text-align: center;
+}
+
+.single-feed-name {
+	display: inline;
+	font-weight: 600;
+}
+
+
+/*******************************
+*	Register Form
+******************************/
+
+.register-form-control {
+	width: 220px;
+	margin-left: 120px;
+}
+
+.register-form-control-description, .register-form-control-investor {
+	width: 220px;
+	height: 80px;
+	margin-left: 120px;
+}
+
+.container-register-form {
+	margin-bottom: 50px;
+	width: 400px;
+	padding: 20px;
+	background: #ffffff;
+	border-radius: 10px;
+}
+
+.control-label {
+	float: left;
+	margin-top: 5px;
+	font-size: 120%;
+	font-weight: 300;
+	margin-right: 20px;
+}
+
+.register-title {
+	font-size: 150%;
+	font-weight: 400;
+	margin-bottom: 25px;
+}
+
+textarea.form-control, .register-form-control {
+	font-weight: 300;
+	padding-left: 8px;
+}
+
+.btn-register {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+#register-name-list {
+	width: 23px;
+	margin-top: -34px;
+	margin-left: 318px;
+}
+
+#register-amount-check, #register-investors-check {
+	margin-top: 5px;
+	margin-left: 120px;
+	margin-bottom: 20px;
+}
+
+
+
+/*******************************
+*	Startup Page
+******************************/
+
+.startup-wrap {
+	width: 100%;
+	padding: 20px;
+	text-align: center;
+	background: #ffffff;
+	border-radius: 10px;
+	margin-bottom:25px;
+}
+
+.startup-logo {
+	width: 100px;
+	height: 100px;
+	color: #ffffff;
+	font-size: 500%;
+	text-align: center;
+	border-radius: 10px;
+	background: #3498db;
+	display: inline-block;
+}
+
+.startup-name {
+	font-size: 150%;
+	margin: 10px;
+	font-weight: 500;
+}
+
+.startup-description {
+
+}
+
+.startup-tags {
+	font-size: 90%;
+	color: #898B95;
+	font-weight: 300;
+}
+
+.btn-follow {
+	margin: 20px;
+}
+
+.startup-founder-wrap {
+	margin: 10px;
+	text-align: left;
+}
+
+.startup-founder-logo {
+	width: 80px;
+	height: 80px;
+	color: #ffffff;
+	font-size: 400%;
+	margin-right: 10px;
+	text-align: center;
+	border-radius: 10px;
+	background: #9b59b6;
+	display: inline-block;
+}
+
+.startup-founder {
+	display: inline-block;
+	font-weight: 400;
+	font-size: 120%;
+}
+
+.startup-founder-title {
+	display: inline-block;
+	font-weight: 300;
+}
+
+.startup-investor {
+	margin: 30px;
+	font-size: 120%;
+	font-weight: 300;
+}
+
+.startup-wrap h1 {
+	margin-bottom: 40px;
+}
+
+

@@ -1,0 +1,44 @@
+<template name="exits">
+
+	{{#if getExits}}
+		<table class="table table-striped">
+			<thead class="startup-table">
+				<tr>
+					<th>Name</th>
+					<th>Country</th>
+					<th>Amount</th>
+					<th>Date</th>
+					<th>Acquirer</th>
+				</tr>
+			</thead>
+			<tbody>
+				{{#each getExits}}
+					<tr>
+						<td><a href="/startup/{{name}}">{{name}}</a></td>
+						<td>{{country}}</td>
+						<td>{{getParsedAmount amount}}</td>
+						<td>
+							{{#if timestamp}}
+								{{parseDate timestamp}}
+							{{else}}
+								No available Date
+							{{/if}}
+						</td>
+						<td>{{acquirer}}</td>
+					</tr>	
+				{{/each}}
+			</tbody>
+		</table>
+
+		{{> loadMore}}
+
+	{{else}}
+		{{#if searchText}}
+			<div class="alert alert-warning" role="alert">No Such Company in our Portfolio</div>
+		{{else}}
+			PLEASE GENERATE EXITS
+		{{/if}}
+	{{/if}}
+	
+
+</template>
