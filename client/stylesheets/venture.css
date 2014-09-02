@@ -6,6 +6,7 @@
 body {
   font-family: "Roboto" , Helvetica, sans-serif !important;
   background: #ecf0f1;
+  font-weight: 300;
 }
 
 a {
@@ -53,13 +54,43 @@ table {
 .navbar-default .navbar-nav > li > a {
 	color: black;
 	font-size: 115%;
-	font-weight: 400;
+	font-weight: 300;
 }
 
 .navbar-default .navbar-brand {
 	color: black;
 	font-size: 150%;
 	font-weight: 500;
+}
+
+.input-login {
+	padding: 10px 10px 5px 10px;
+}
+
+.form-login {
+	border-radius: 5px !important;
+}
+
+.btn-login, .btn-logout {
+	left: 50%;
+	width: 150px;
+	position: relative;
+	margin: 15px 0 10px -75px;
+}
+
+.dropdown-menu {
+	width: 200px;
+}
+
+.label-login {
+	left: 50%;
+	width: 150px;
+	padding: 5px;
+	display: none;
+	margin-top: 10px;
+	border-radius: 5px;
+	position: relative;
+	margin-left: -75px;
 }
 
 
@@ -247,5 +278,23 @@ textarea.form-control, .register-form-control {
 .startup-wrap h1 {
 	margin-bottom: 40px;
 }
+
+
+/*******************************
+*	Administrative Page
+******************************/
+.admin-wrap {
+	width: 95%;
+	padding: 50px;
+	margin-left: 5%;
+	border-radius: 10px;
+	background: #ffffff;
+}
+
+
+
+
+
+
 
 

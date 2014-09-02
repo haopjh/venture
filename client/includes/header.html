@@ -24,9 +24,35 @@
 					</li>
 
 					<li><a href="/register/startup">Register Your Startup</a></li>
-					<li><a href="settings">Settings</a></li>
+					<li><a href="/admin">Administrative</a></li>
 
-					{{> loginButtons}} 
+						
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+							{{#if currentUser}}
+								Hi {{currentUser.username}}
+							{{else}}
+								Login 
+							{{/if}}
+						<span class="caret"></span></a>
+						<ul class="dropdown-menu">
+
+							{{#if currentUser}}
+								<button type="submit" class="btn btn-warning btn-logout">Log Out</button>
+							{{else}}
+								<form role="form">
+									<div class="input-group input-login">
+										<input type="text" class="form-control form-login" id="username" placeholder="Username">
+									</div>
+									<div class="input-group input-login">
+										<input type="password" class="form-control form-login" id="password" placeholder="Password">
+									</div>
+									<span class="label label-danger label-login">Unable to Login</span>
+									<button type="submit" class="btn btn-default btn-login">Log In</button>
+								</form>
+							{{/if}}
+						</ul>
+					</li>
 				</ul>
 			</div><!-- /.navbar-collapse -->
 		</div><!-- /.container-fluid -->

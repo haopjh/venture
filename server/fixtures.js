@@ -90,25 +90,25 @@ Meteor.methods({
 				
 		});
 
-		var eList = Exits.find().fetch();
-		_.each(eList, function(exit) {
-			if(exit.name){
-				var startup = Startups.findOne({name: exit.name});
-				if(!startup) {
-					Startups.insert({
-						'name': exit.name,
-						'country': exit.country,
-						'timestamp': exit.timestamp,
-						'lastStage': "Acquired",
-						'totalFunding': exit.amount
-					});
-					index++;
-				}else{
-					Startups.update(startup._id, {$set: {lastStage: "Acquired"}})
-				}
-			}
+		// var eList = Exits.find().fetch();
+		// _.each(eList, function(exit) {
+		// 	if(exit.name){
+		// 		var startup = Startups.findOne({name: exit.name});
+		// 		if(!startup) {
+		// 			Startups.insert({
+		// 				'name': exit.name,
+		// 				'country': exit.country,
+		// 				'timestamp': exit.timestamp,
+		// 				'lastStage': "Acquired",
+		// 				'totalFunding': exit.amount
+		// 			});
+		// 			index++;
+		// 		}else{
+		// 			Startups.update(startup._id, {$set: {lastStage: "Acquired"}})
+		// 		}
+		// 	}
 				
-		});
+		// });
 
 		console.log("Startups Created: ", index);
 	},
@@ -162,6 +162,8 @@ Meteor.methods({
 	},
 
 	populateStages: function() {
+		Stages.remove({});
+
 		Stages.insert({'name': "Crowdfunding"});
 		Stages.insert({'name': "Venture"});
 		Stages.insert({'name': "Grant"});
@@ -185,39 +187,11 @@ Meteor.methods({
 
 		console.log("Stages popuplated: ", Stages.find().count());
 	},
-
-	removeStages: function() {
-		Stages.remove({});
-		console.log("count", Stages.find().count());
-	},
-
-	// populateCategory: function() {
-	// 	Stages.insert({'name': "Crowdfunding"});
-	// 	Stages.insert({'name': "Venture"});
-	// 	Stages.insert({'name': "Grant"});
-	// 	Stages.insert({'name': "Award"});
-	// 	Stages.insert({'name': "Convertible Bone"});
-	// 	Stages.insert({'name': "Private Equity"});
-	// 	Stages.insert({'name': "Series A"});
-	// 	Stages.insert({'name': "Series A1"});
-	// 	Stages.insert({'name': "Series B"});
-	// 	Stages.insert({'name': "Series B1"});
-	// 	Stages.insert({'name': "Series C"});
-	// 	Stages.insert({'name': "Series C1"});
-	// 	Stages.insert({'name': "Series D"});
-	// 	Stages.insert({'name': "Series D1"});
-	// 	Stages.insert({'name': "Series E"});
-	// 	Stages.insert({'name': "Series E1"});
-	// 	Stages.insert({'name': "Series F"});
-	// 	Stages.insert({'name': "Series F1"});
-	// 	Stages.insert({'name': "Series G"});
-	// 	Stages.insert({'name': "Series G1"});
-
-	// 	console.log("Stages popuplated: ", Stages.find().count());
-	// },
-
-	// removeStages: function() {
-	// 	Stages.remove({});
-	// 	console.log("count", Stages.find().count());
-	// }
 });
+
+if(Meteor.users.find().count() === 0){
+	Accounts.createUser({username: "lucas", password: "lucas"});
+
+}
+
+

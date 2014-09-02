@@ -35,10 +35,6 @@ Template.admin.events({
 	},
 
 
-
-	'click #remove-stages': function() {
-		Meteor.call("removeStages");
-	},
 	'click #populate-stages': function() {
 		Meteor.call("populateStages");
 	},
