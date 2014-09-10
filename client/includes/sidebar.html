@@ -1,14 +1,38 @@
 <template name="sideBar">
-	<div class="col-md-3 side-bar">
-		<ul class="nav nav-pills nav-stacked" role="tablist">
-			<li class="disabled"><a href="#">Overview</a></li>
-			<li class="{{activeRouteClass 'fundingFeeds'}}"><a href="/funding-feeds">Funding Feed</a></li>
-			<li class="{{activeRouteClass 'startups'}}"><a href="/startups">Startups</a></li>
-			<li class="{{activeRouteClass 'exits'}}"><a href="/exits">M&As</a></li>
-			<li class="disabled"><a href="#">News Mention</a></li>
-			<li class="disabled"><a href="#">Saved Searches</a></li>
-			<li class="disabled"><a href="#">Alerts</a></li>
-			<li class="disabled"><a href="#">Research</a></li>
-		</ul>
+	<div class="col-md-3">
+		<div class="side-bar">
+			
+			<ul class="nav nav-pills nav-stacked" role="tablist">
+				<!--<li class="disabled"><a href="#">Overview</a></li>-->
+				<li class="{{activeRouteClass 'fundingFeeds'}}"><a href="/funding-feeds">Funding Feed</a></li>
+				<li class="{{activeRouteClass 'startups'}}"><a href="/startups">Startups</a></li>
+				<li class="{{activeRouteClass 'exits'}}"><a href="/exits">M&As</a></li>
+				<!--<li class="disabled"><a href="#">News Mention</a></li>
+				<li class="disabled"><a href="#">Saved Searches</a></li>
+				<li class="disabled"><a href="#">Alerts</a></li>
+				<li class="disabled"><a href="#">Research</a></li>-->
+			</ul>
+		</div>
+		<div class="side-bar-filter">
+			<div class="filter-title">SORT OPTIONS</div>
+			<hr>
+			<div class="filter-content">
+				<div class="checkbox">
+					<label>
+						<input type="checkbox" class="checkbox-name"> Name
+					</label>
+				</div>
+				<div class="checkbox">
+					<label>
+						<input type="checkbox" class="checkbox-stage"> Funding Stage
+					</label>
+				</div>
+				<div class="checkbox">
+					<label>
+						<input type="checkbox" class="checkbox-date"> Latest Fundings
+					</label>
+				</div>
+			</div>
+		</div>
 	</div>
 </template>

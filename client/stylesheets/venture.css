@@ -10,15 +10,16 @@ body {
 }
 
 a {
-	color: #1abc9c;
+	color: #2980b9;
+	font-weight: 400;
 }
 
 a:hover {
-	color: #27ae60;
+	color: #2c3e50;
 }
 
 .nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
-	background-color: #1abc9c;
+	background-color: #34495e;
 }
 
 #load-more {
@@ -97,18 +98,43 @@ table {
 /*******************************
 *	Side bar
 ******************************/
-.side-bar {
+.side-bar, .side-bar-filter{
+	padding-left: 10%;
+	padding-right: 10%;
 	margin-bottom: 30px;
 	border-radius: 10px;
 	background: #ffffff;
 }
 
+.side-bar-filter {
+	bottom: 10px;
+	margin-top: 20px;
+	font-weight: 400;
+}
+
+.nav {
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.filter-title {
+	font-size: 20px;
+	font-weight: 500;
+	padding-top: 10px;
+	text-align: center;
+	margin-bottom: -15px;
+}
+
+.filter-content {
+	padding-left: 10px;
+	padding-bottom: 10px;
+}
 
 /*******************************
 *	Feeds
 ******************************/
 .feed-group {
-	padding-top: 20px;
+	padding-bottom: 20px;
 }
 
 .jumbotron.feed-cell {

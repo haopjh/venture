@@ -29,5 +29,9 @@ Template.startup.helpers({
 			});
 		});
 		return iList.join(" | ");
+	},
+
+	getCategories: function() {
+		return this.categories;
 	}
 });

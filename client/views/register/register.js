@@ -2,6 +2,13 @@
 *   Register Startup
 ******************************/
 
+Template.registerStartup.helpers({
+    getAllCategories: function() {
+        return Categories.find({},{sort:{name:1}});
+    },
+});
+
+
 Template.registerStartup.events({
 	'submit form': function(event) {
     	event.preventDefault();
@@ -30,7 +37,14 @@ Template.registerStartup.events({
     		$(".form-group-location").removeClass("has-error");
     		$(".form-group-location").addClass("has-success");
     	}
-    	if($("#register-category").find(":selected").text() === "Choose Category:D"){
+
+        var categories = $("#register-category").find(":selected");
+        var cList = [];
+        _.each(categories, function(category){
+            cList.push(category.text);
+        });
+
+    	if(cList.length === 0){
             $(".form-group-category").removeClass("has-success");
     		$(".form-group-category").addClass("has-error");
     		isValid = false;
@@ -53,7 +67,7 @@ Template.registerStartup.events({
 				name: $(event.target).find('[name=name]').val(),
 				url: $(event.target).find('[name=url]').val(),
 				country: $(event.target).find('[name=location]').val(),
-				category: $(event.target).find('[name=category]').val(),
+				categories: cList,
 				description: $(event.target).find('[name=description]').val(),
 			}
 
@@ -151,6 +165,8 @@ Template.registerFunding.events({
         }   
     },
 });
+
+
 Template.registerFunding.helpers({
     getNameList: function() {
         return Startups.find({},{sort:{name:1}});

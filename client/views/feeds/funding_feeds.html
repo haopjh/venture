@@ -1,15 +1,22 @@
 <template name="fundingFeeds">
 
+
 	{{#if getFeedGroup}}
 		{{#each getFeedGroup}}
-			{{> feedGroup}}
+			{{#if hasFilter}}
+				{{parseDate timestamp}}
+				{{> singleFeed}}
+				<br/>
+			{{else}}
+				{{> feedGroup}}
+			{{/if}}
 		{{/each}}
 
 			{{> loadMore}}
 		
 		<br/>
-	{{else}}
 
+	{{else}}
 		{{#if searchText}}
 			<div class="alert alert-warning" role="alert">No Such Company in our Portfolio</div>
 		{{else}}

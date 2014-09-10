@@ -11,7 +11,14 @@
 		</div>
 
 		<div class="startup-tags">
-			This . Is . A . List . Of . Tags
+			<br/>
+			{{#if getCategories}}
+				{{#each getCategories}}
+					<i>{{this}}</i> <br/>
+				{{/each}}
+			{{else}}
+				This . Is . A . List . Of . Categories
+			{{/if}}
 		</div>
 
 		<button class="btn btn-info btn-follow">

@@ -31,3 +31,7 @@ Meteor.publish('singleStartup', function(startupName) {
 Meteor.publish("allStages", function(){
 	return Stages.find();
 });
+
+Meteor.publish("allCategories", function(){
+	return Categories.find();
+});

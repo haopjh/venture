@@ -12,7 +12,7 @@ Meteor.methods({
 				lastFundingStage: "none",
 				totalFunding: 0,
 			},
-			_.pick(startupAttr, 'name', 'category', 'country',
+			_.pick(startupAttr, 'name', 'categories', 'country',
 			'lastStage', 'totalFunding', 'timestamp'));
 
 		startup._id = Startups.insert(startup);

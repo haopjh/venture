@@ -187,11 +187,84 @@ Meteor.methods({
 
 		console.log("Stages popuplated: ", Stages.find().count());
 	},
+
+	populateCategories: function() {
+		Categories.remove({});
+
+		Categories.insert({'name': "Advertising"});
+		Categories.insert({'name': "Agriculture"});
+		Categories.insert({'name': "Analytics"});
+		Categories.insert({'name': "Automotive"});
+		Categories.insert({'name': "Banking"});
+		Categories.insert({'name': "Biotechnology"});
+		Categories.insert({'name': "Bitcoin"});
+		Categories.insert({'name': "Career / Job Search"});
+		Categories.insert({'name': "Classifieds"});
+		Categories.insert({'name': "CleanTech"});
+		Categories.insert({'name': "Cloud Computing"});
+		Categories.insert({'name': "Crowdfunding"});
+		Categories.insert({'name': "Customer Support"});
+		Categories.insert({'name': "Dating"});
+		Categories.insert({'name': "Drones"});
+		Categories.insert({'name': "E-Commerce"});
+		Categories.insert({'name': "Education"});
+		Categories.insert({'name': "Email"});
+		Categories.insert({'name': "Energy"});
+		Categories.insert({'name': "Enterprise Software"});
+		Categories.insert({'name': "Entertainment"});
+		Categories.insert({'name': "Finance"});
+		Categories.insert({'name': "Food & Beverages"});
+		Categories.insert({'name': "Funerals"});
+		Categories.insert({'name': "Gaming"});
+		Categories.insert({'name': "Government"});
+		Categories.insert({'name': "Hardware"});
+		Categories.insert({'name': "Healthcare"});
+		Categories.insert({'name': "Hospitality"});
+		Categories.insert({'name': "Human Resources (HR)"});
+		Categories.insert({'name': "Insurance"});
+		Categories.insert({'name': "Internet of Things"});
+		Categories.insert({'name': "Legal"});
+		Categories.insert({'name': "Lending"});
+		Categories.insert({'name': "Market Research"});
+		Categories.insert({'name': "Marketing"});
+		Categories.insert({'name': "Media"});
+		Categories.insert({'name': "Mobile"});
+		Categories.insert({'name': "Music"});
+		Categories.insert({'name': "Network Infrastructure"});
+		Categories.insert({'name': "Oil & Gas"});
+		Categories.insert({'name': "Payments"});
+		Categories.insert({'name': "Pharmaceuticals"});
+		Categories.insert({'name': "Publishing"});
+		Categories.insert({'name': "Real Estate"});
+		Categories.insert({'name': "Retail"});
+		Categories.insert({'name': "Search"});
+		Categories.insert({'name': "Security"});
+		Categories.insert({'name': "Semiconductors"});
+		Categories.insert({'name': "Social Networking"});
+		Categories.insert({'name': "Software Development"});
+		Categories.insert({'name': "Space Travel"});
+		Categories.insert({'name': "Storage"});
+		Categories.insert({'name': "Technical Support"});
+		Categories.insert({'name': "Telecommunications"});
+		Categories.insert({'name': "Transportation"});
+		Categories.insert({'name': "Travel"});
+		Categories.insert({'name': "Wearables"});
+		Categories.insert({'name': "Robotics"});
+		
+
+		console.log("Categories popuplated: ", Categories.find().count());
+	},
 });
 
 if(Meteor.users.find().count() === 0){
 	Accounts.createUser({username: "lucas", password: "lucas"});
 
 }
+
+
+
+
+
+
 
 

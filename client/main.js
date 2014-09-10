@@ -6,6 +6,8 @@ Deps.autorun(function() {
 	if(Session.get("isRegisterFunding")){
 		registerHandle = Meteor.subscribe("allStartupName", Session.get("searchText"));
 		Meteor.subscribe("allStages");
+	}else if(Session.get("isRegisterStartup")){
+		Meteor.subscribe("allCategories");
 	}
 });
 

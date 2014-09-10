@@ -39,4 +39,10 @@ Template.admin.events({
 		Meteor.call("populateStages");
 	},
 
+	'click #populate-categories': function() {
+		Meteor.call("populateCategories");
+	},
+
+	
+
 });
